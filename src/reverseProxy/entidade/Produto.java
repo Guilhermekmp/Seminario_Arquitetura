@@ -2,13 +2,17 @@ package reverseProxy.entidade;
 
 public class Produto {
 
+    public Produto(Integer id,String nome, Double valor) {
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+    }
+
     private Integer id;
 
     private String nome;
 
     private Double valor;
-
-    private Integer estoque;
 
     public Integer getId() {
         return id;
@@ -32,13 +36,5 @@ public class Produto {
 
     public void setValor(Double valor) {
         this.valor = valor;
-    }
-
-    public Integer getEstoque() {
-        return estoque;
-    }
-
-    public void setEstoque(Integer estoque) {
-        this.estoque = estoque;
     }
 }

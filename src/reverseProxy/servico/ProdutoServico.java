@@ -13,6 +13,8 @@ public final class ProdutoServico extends AbstractServico<Produto> {
 
     private ProdutoServico instancia;
 
+    private Integer sequence = 0;
+
 
     public ProdutoServico getInstance(){
         if(instancia == null){
@@ -34,7 +36,6 @@ public final class ProdutoServico extends AbstractServico<Produto> {
                 throw new RuntimeException();
             }
         } );
-        produto.setId(incrementaSequence());
         produtos.add(produto);
         return true;
     }

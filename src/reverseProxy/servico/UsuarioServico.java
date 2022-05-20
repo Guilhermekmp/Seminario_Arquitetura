@@ -10,8 +10,6 @@ public final class UsuarioServico extends AbstractServico<Usuario> {
     public static final String USUARIO_NÃO_ECONTRADO = "Usuario não econtrado";
     private List<Usuario> usuarios = new ArrayList<Usuario>();
 
-    private Integer sequence = 0;
-
     private UsuarioServico instancia;
 
     public UsuarioServico getInstance(){
@@ -41,7 +39,6 @@ public final class UsuarioServico extends AbstractServico<Usuario> {
                 throw new RuntimeException();
             }
         } );
-        usuario.setId(incrementaSequence());
         usuarios.add(usuario);
         return true;
     }
